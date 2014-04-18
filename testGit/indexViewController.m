@@ -35,6 +35,12 @@
     
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    NSDateFormatter *DateFormatter=[[NSDateFormatter alloc] init];
+    [DateFormatter setDateFormat:@"yyyy-MM-dd hh:mm:ss"];
+    NSLog(@"%@",[DateFormatter stringFromDate:[NSDate date]]);
+    
+    
 }
 
 - (void)didReceiveMemoryWarning

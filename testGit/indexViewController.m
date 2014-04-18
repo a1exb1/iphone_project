@@ -40,6 +40,9 @@
     [DateFormatter setDateFormat:@"yyyy-MM-dd hh:mm:ss"];
     NSLog(@"%@",[DateFormatter stringFromDate:[NSDate date]]);
     
+    NSDate* testDate = [DateFormatter dateFromString:@"1995-04-21 03:31:30"];
+    NSLog(@"%@", testDate);
+    
     
 }
 

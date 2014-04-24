@@ -84,6 +84,55 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		79AA222E1909439D005AC8A3 /* classes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = classes;
+			sourceTree = "<group>";
+		};
+		79AA2230190943B2005AC8A3 /* manage */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = manage;
+			sourceTree = "<group>";
+		};
+		79AA2231190943B8005AC8A3 /* agenda */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = agenda;
+			sourceTree = "<group>";
+		};
+		79AA2232190943BF005AC8A3 /* calender */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = calender;
+			sourceTree = "<group>";
+		};
+		79AA2233190943CE005AC8A3 /* multipleLessons */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = multipleLessons;
+			sourceTree = "<group>";
+		};
+		79AA2234190943DE005AC8A3 /* menu */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = menu;
+			sourceTree = "<group>";
+		};
+		79AA223519094410005AC8A3 /* login */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = login;
+			sourceTree = "<group>";
+		};
 		E40DF271190017E100E1332A = {
 			isa = PBXGroup;
 			children = (
@@ -117,6 +166,7 @@
 		E40DF283190017E100E1332A /* testGit */ = {
 			isa = PBXGroup;
 			children = (
+				79AA222E1909439D005AC8A3 /* classes */,
 				E473527D19002785008006EE /* viewControllers */,
 				E40DF28C190017E100E1332A /* ABAppDelegate.h */,
 				E40DF28D190017E100E1332A /* ABAppDelegate.m */,
@@ -162,6 +212,12 @@
 		E473527D19002785008006EE /* viewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				79AA223519094410005AC8A3 /* login */,
+				79AA2234190943DE005AC8A3 /* menu */,
+				79AA2233190943CE005AC8A3 /* multipleLessons */,
+				79AA2232190943BF005AC8A3 /* calender */,
+				79AA2231190943B8005AC8A3 /* agenda */,
+				79AA2230190943B2005AC8A3 /* manage */,
 				E473527E1900279E008006EE /* indexViewController.h */,
 				E473527F1900279E008006EE /* indexViewController.m */,
 			);

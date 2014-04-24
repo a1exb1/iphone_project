@@ -23,6 +23,8 @@
 		E40DF2AA190017E200E1332A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E40DF2A8190017E200E1332A /* InfoPlist.strings */; };
 		E40DF2AC190017E200E1332A /* testGitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E40DF2AB190017E200E1332A /* testGitTests.m */; };
 		E47352801900279E008006EE /* indexViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E473527F1900279E008006EE /* indexViewController.m */; };
+		E4F96CC919097441008D75D6 /* tutorsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4F96CC819097441008D75D6 /* tutorsTableViewController.m */; };
+		E4F96CCC19097D49008D75D6 /* tutors2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4F96CCB19097D49008D75D6 /* tutors2ViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,10 @@
 		E40DF2AB190017E200E1332A /* testGitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = testGitTests.m; sourceTree = "<group>"; };
 		E473527E1900279E008006EE /* indexViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = indexViewController.h; sourceTree = "<group>"; };
 		E473527F1900279E008006EE /* indexViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = indexViewController.m; sourceTree = "<group>"; };
+		E4F96CC719097441008D75D6 /* tutorsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tutorsTableViewController.h; sourceTree = "<group>"; };
+		E4F96CC819097441008D75D6 /* tutorsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = tutorsTableViewController.m; sourceTree = "<group>"; };
+		E4F96CCA19097D49008D75D6 /* tutors2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tutors2ViewController.h; sourceTree = "<group>"; };
+		E4F96CCB19097D49008D75D6 /* tutors2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = tutors2ViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +100,10 @@
 		79AA2230190943B2005AC8A3 /* manage */ = {
 			isa = PBXGroup;
 			children = (
+				E4F96CC719097441008D75D6 /* tutorsTableViewController.h */,
+				E4F96CC819097441008D75D6 /* tutorsTableViewController.m */,
+				E4F96CCA19097D49008D75D6 /* tutors2ViewController.h */,
+				E4F96CCB19097D49008D75D6 /* tutors2ViewController.m */,
 			);
 			name = manage;
 			sourceTree = "<group>";
@@ -269,7 +279,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = AB;
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Alex Bechmann";
 				TargetAttributes = {
 					E40DF29D190017E200E1332A = {
@@ -323,7 +333,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4F96CCC19097D49008D75D6 /* tutors2ViewController.m in Sources */,
 				E40DF28A190017E100E1332A /* main.m in Sources */,
+				E4F96CC919097441008D75D6 /* tutorsTableViewController.m in Sources */,
 				E40DF297190017E100E1332A /* ABViewController.m in Sources */,
 				E40DF28E190017E100E1332A /* ABAppDelegate.m in Sources */,
 				E47352801900279E008006EE /* indexViewController.m in Sources */,
@@ -388,7 +400,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -428,7 +439,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -487,7 +497,6 @@
 		E40DF2B3190017E200E1332A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/testGit.app/testGit";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -510,7 +519,6 @@
 		E40DF2B4190017E200E1332A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/testGit.app/testGit";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",

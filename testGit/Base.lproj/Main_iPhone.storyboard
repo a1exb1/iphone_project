@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13A598" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="6gc-r8-CT0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="6gc-r8-CT0">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -24,14 +24,16 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Tutors" id="ePZ-IG-zz4"/>
+                    <navigationItem key="navigationItem" title="Tutors" id="ePZ-IG-zz4">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="afm-WX-flN"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="mainTableView" destination="1ek-IP-U4O" id="ccw-iD-VYy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IHw-Si-Y7h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="485" y="-760"/>
+            <point key="canvasLocation" x="517" y="-760"/>
         </scene>
         <!--Table View Controller - Courses-->
         <scene sceneID="phI-gb-I7M">
@@ -43,7 +45,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="ufg-HK-Hz5">
-                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ufg-HK-Hz5" id="nca-0w-BSZ">
                                     <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
@@ -59,7 +61,10 @@
                             <outlet property="delegate" destination="IaP-ym-YJ7" id="oEn-mc-rzm"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Courses" id="bAG-vz-9CE"/>
+                    <navigationItem key="navigationItem" title="Courses" id="bAG-vz-9CE">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="4B2-fq-cJa"/>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nae-nJ-RcJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -83,7 +88,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="c9P-PF-mQh">
-                                        <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="c9P-PF-mQh" id="73y-Py-AjC">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -98,7 +103,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Students" id="abH-H7-deW"/>
+                    <navigationItem key="navigationItem" title="Students" id="abH-H7-deW">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="pwT-q3-qaI"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dr8-Nv-69M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -116,15 +123,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Edit Student" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Krj-y5-2bR">
-                                <rect key="frame" x="113" y="20" width="95" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Huz-tX-HsX">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Edit Studen" id="REI-B1-5N1">
+                                        <barButtonItem key="rightBarButtonItem" title="Done" id="J91-Nz-BMC"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <toolbarItems>
+                        <barButtonItem title="Item" id="iLk-Iu-4JB"/>
+                    </toolbarItems>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oc4-xL-3nf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

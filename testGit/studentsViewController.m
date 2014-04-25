@@ -74,12 +74,6 @@ NSMutableArray *viewStudentsArray;
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    
-    //if(section == 0){
-        //return [[viewStudentsArray objectAtIndex:section] count];
-    //}
-    
-    
     return [[viewStudentsArray objectAtIndex:section] count];
 }
 
@@ -89,17 +83,14 @@ NSMutableArray *viewStudentsArray;
                                                   reuseIdentifier:@"cell"];
     
     NSMutableArray *sectionArray = [[NSMutableArray alloc]init];
-    
     sectionArray = [viewStudentsArray objectAtIndex:indexPath.section];
     
     int weekdayFromJson = [[[sectionArray objectAtIndex:indexPath.row] objectForKey:@"Weekday"] intValue];
     NSString *weekday = [NSString stringWithFormat:@""];
     
     weekday = [daysOfWeekArray objectAtIndex: weekdayFromJson];
-    
     int hour = [[[sectionArray objectAtIndex:indexPath.row] objectForKey:@"Hour"] intValue];
     int minute = [[[sectionArray objectAtIndex:indexPath.row] objectForKey:@"Minute"] intValue];
-
     int row1 = [[_uniqueWeekdays objectAtIndex:indexPath.section] intValue];
     
     if (weekdayFromJson == row1) {
@@ -110,15 +101,12 @@ NSMutableArray *viewStudentsArray;
     }
     
     return cell;
-    
 }
 
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    //onclick for each object, put to label for example
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     self.studentIDSender = cell.accessibilityValue;
-    //self.itemNameSender = cell.textLabel.text;
     [self performSegueWithIdentifier:@"StudentsToEditStudent" sender:self];
     
 }
@@ -127,7 +115,6 @@ NSMutableArray *viewStudentsArray;
 {
     _data = [[NSMutableData alloc]init];
     _uniqueWeekdays = [[NSArray alloc]init];
-    
 }
 
 -(void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)theData
@@ -173,12 +160,8 @@ NSMutableArray *viewStudentsArray;
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-    
     editStudentViewController *item = segue.destinationViewController;
     item.studentID = self.studentIDSender;
-    
 }
 
 

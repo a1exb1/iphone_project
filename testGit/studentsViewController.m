@@ -52,11 +52,16 @@ NSMutableArray *viewStudentsArray;
                                 nil];
     
     viewStudentsArray = [[NSMutableArray alloc] init];
-    
+    [[UITableViewHeaderFooterView appearance] setTintColor:[UIColor colorWithRed:0.9372549019607843 green:0.9372549019607843 blue:0.9372549019607843 alpha:1]];
+    [_mainTableView setBackgroundColor:[UIColor colorWithRed:0.9372549019607843 green:0.9372549019607843 blue:0.9372549019607843 alpha:1]];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-    return 50;
+    return 40;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
+    return 10;
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
@@ -78,6 +83,13 @@ NSMutableArray *viewStudentsArray;
     return [[viewStudentsArray objectAtIndex:section] count];
 }
 
+- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
+{
+    UIView *view = [[UIView alloc] init];
+    [view setBackgroundColor:[UIColor clearColor]];
+    return view;
+}
+
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle
@@ -92,14 +104,10 @@ NSMutableArray *viewStudentsArray;
     weekday = [daysOfWeekArray objectAtIndex: weekdayFromJson];
     int hour = [[[sectionArray objectAtIndex:indexPath.row] objectForKey:@"Hour"] intValue];
     int minute = [[[sectionArray objectAtIndex:indexPath.row] objectForKey:@"Minute"] intValue];
-    int row1 = [[_uniqueWeekdays objectAtIndex:indexPath.section] intValue];
-    
-    if (weekdayFromJson == row1) {
-        cell.textLabel.text = [NSString stringWithFormat:@"%02d:%02d - %@", hour, minute, [[sectionArray objectAtIndex:indexPath.row] objectForKey:@"StudentName"]];
-        cell.accessibilityValue = [[sectionArray objectAtIndex:indexPath.row] objectForKey:@"StudentID"];
-        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-        return cell;
-    }
+
+    cell.textLabel.text = [NSString stringWithFormat:@"%02d:%02d - %@", hour, minute, [[sectionArray objectAtIndex:indexPath.row] objectForKey:@"StudentName"]];
+    cell.accessibilityValue = [[sectionArray objectAtIndex:indexPath.row] objectForKey:@"StudentID"];
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
     return cell;
 }
@@ -134,19 +142,15 @@ NSMutableArray *viewStudentsArray;
     _uniqueWeekdays = [_uniqueWeekdays sortedArrayUsingDescriptors:
                        @[[NSSortDescriptor sortDescriptorWithKey:@"doubleValue"
                                                        ascending:YES]]];
-    NSLog(@"%@", _uniqueWeekdays);
     for (id weekday in _uniqueWeekdays) {
         NSMutableArray *listOfStudentsForArray = [[NSMutableArray alloc] init];
-        //NSLog(@"%@", weekday);
         for (id student in _students) {
             if([[student objectForKey:@"Weekday" ] isEqualToString:weekday]){
-                //NSLog(@"%@", student);
                 [listOfStudentsForArray addObject:student];
             }
         }
         [viewStudentsArray addObject:listOfStudentsForArray];
     }
-    
     [self.mainTableView reloadData];
     
 }

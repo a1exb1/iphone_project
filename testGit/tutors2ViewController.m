@@ -33,8 +33,8 @@
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     [[NSURLConnection alloc] initWithRequest: request delegate:self];
     
-    [[UITableViewHeaderFooterView appearance] setTintColor:[UIColor colorWithRed:0.9372549019607843 green:0.9372549019607843 blue:0.9372549019607843 alpha:1]];
-    [_mainTableView setBackgroundColor:[UIColor colorWithRed:0.9372549019607843 green:0.9372549019607843 blue:0.9372549019607843 alpha:1]];
+    [[UITableViewHeaderFooterView appearance] setTintColor:[UIColor groupTableViewBackgroundColor]];
+    [_mainTableView setBackgroundColor:[UIColor groupTableViewBackgroundColor]];
     //_mainTableView.hidden = YES;
 }
 

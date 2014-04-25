@@ -7,6 +7,7 @@
 //
 
 #import "studentsViewController.h"
+#import "editStudentViewController.h"
 
 @interface studentsViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *mainTableView;
@@ -102,7 +103,7 @@
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     self.studentIDSender = cell.accessibilityValue;
     //self.itemNameSender = cell.textLabel.text;
-    //[self performSegueWithIdentifier:@"CoursesToStudent" sender:self];
+    [self performSegueWithIdentifier:@"StudentsToEditStudent" sender:self];
     
 }
 
@@ -130,6 +131,17 @@
     UIAlertView *errorView = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Data download failed" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
     [errorView show];
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+}
+
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+    
+    editStudentViewController *item = segue.destinationViewController;
+    item.studentID = self.studentIDSender;
+    
 }
 
 

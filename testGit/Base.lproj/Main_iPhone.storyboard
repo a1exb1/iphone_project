@@ -109,15 +109,15 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="c9P-PF-mQh">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="c9P-PF-mQh">
                                         <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="c9P-PF-mQh" id="73y-Py-AjC">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="fEm-d2-Puk" kind="modal" identifier="StudentsToEditStudents" id="yzg-Wm-s5k"/>
+                                            <segue destination="H1Y-B8-iAt" kind="push" identifier="StudentsToEditStudent" id="bT2-f9-uRb"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -136,38 +136,38 @@
             </objects>
             <point key="canvasLocation" x="1337" y="-768"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="9GN-Oi-Zo5">
+        <!--Edit Student View Controller - Edit Student-->
+        <scene sceneID="p4V-Gm-9HZ">
             <objects>
-                <viewController id="fEm-d2-Puk" sceneMemberID="viewController">
+                <viewController id="H1Y-B8-iAt" customClass="editStudentViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="fdP-oG-cAc"/>
-                        <viewControllerLayoutGuide type="bottom" id="JYL-09-cxc"/>
+                        <viewControllerLayoutGuide type="top" id="n4h-Wd-dFr"/>
+                        <viewControllerLayoutGuide type="bottom" id="yf6-Ix-pmC"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="gcV-30-dcn">
+                    <view key="view" contentMode="scaleToFill" id="jV6-yG-ZZO">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Huz-tX-HsX">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="Edit Studen" id="REI-B1-5N1">
-                                        <barButtonItem key="rightBarButtonItem" title="Done" id="J91-Nz-BMC"/>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D2n-lK-WLr">
+                                <rect key="frame" x="20" y="104" width="280" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <toolbarItems>
-                        <barButtonItem title="Item" id="iLk-Iu-4JB"/>
-                    </toolbarItems>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationItem key="navigationItem" title="Edit Student" id="fbg-W7-F7q">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="xtM-4N-cZ8"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="youSelectedLbl" destination="D2n-lK-WLr" id="q1V-9L-snF"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Oc4-xL-3nf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="muH-Uv-OCu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1825" y="-768"/>
+            <point key="canvasLocation" x="1783" y="-765"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="VAS-VI-gMx">

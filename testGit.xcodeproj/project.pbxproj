@@ -27,6 +27,7 @@
 		E47352801900279E008006EE /* indexViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E473527F1900279E008006EE /* indexViewController.m */; };
 		E4F96CC919097441008D75D6 /* tutorsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4F96CC819097441008D75D6 /* tutorsTableViewController.m */; };
 		E4F96CCC19097D49008D75D6 /* tutors2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4F96CCB19097D49008D75D6 /* tutors2ViewController.m */; };
+		E4F96D13190AA12B008D75D6 /* editStudentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4F96D12190AA12B008D75D6 /* editStudentViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,8 @@
 		E4F96CC819097441008D75D6 /* tutorsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = tutorsTableViewController.m; sourceTree = "<group>"; };
 		E4F96CCA19097D49008D75D6 /* tutors2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tutors2ViewController.h; sourceTree = "<group>"; };
 		E4F96CCB19097D49008D75D6 /* tutors2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = tutors2ViewController.m; sourceTree = "<group>"; };
+		E4F96D11190AA12B008D75D6 /* editStudentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = editStudentViewController.h; sourceTree = "<group>"; };
+		E4F96D12190AA12B008D75D6 /* editStudentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = editStudentViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +117,8 @@
 				E430DCB4190A582B00DEFD7C /* coursesViewController.m */,
 				E430DCB6190A5BB200DEFD7C /* studentsViewController.h */,
 				E430DCB7190A5BB200DEFD7C /* studentsViewController.m */,
+				E4F96D11190AA12B008D75D6 /* editStudentViewController.h */,
+				E4F96D12190AA12B008D75D6 /* editStudentViewController.m */,
 			);
 			name = manage;
 			sourceTree = "<group>";
@@ -347,6 +352,7 @@
 				E40DF28A190017E100E1332A /* main.m in Sources */,
 				E4F96CC919097441008D75D6 /* tutorsTableViewController.m in Sources */,
 				E40DF297190017E100E1332A /* ABViewController.m in Sources */,
+				E4F96D13190AA12B008D75D6 /* editStudentViewController.m in Sources */,
 				E430DCB8190A5BB200DEFD7C /* studentsViewController.m in Sources */,
 				E40DF28E190017E100E1332A /* ABAppDelegate.m in Sources */,
 				E47352801900279E008006EE /* indexViewController.m in Sources */,

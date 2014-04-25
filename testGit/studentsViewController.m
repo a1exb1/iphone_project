@@ -48,6 +48,7 @@ NSMutableArray *viewStudentsArray;
                                 @"Wednesday",
                                 @"Friday",
                                 @"Saturday",
+                                @"Sunday",
                                 nil];
     
     viewStudentsArray = [[NSMutableArray alloc] init];
@@ -133,14 +134,14 @@ NSMutableArray *viewStudentsArray;
     _uniqueWeekdays = [_uniqueWeekdays sortedArrayUsingDescriptors:
                        @[[NSSortDescriptor sortDescriptorWithKey:@"doubleValue"
                                                        ascending:YES]]];
-    
-    for (id tempObject in _uniqueWeekdays) {
+    NSLog(@"%@", _uniqueWeekdays);
+    for (id weekday in _uniqueWeekdays) {
         NSMutableArray *listOfStudentsForArray = [[NSMutableArray alloc] init];
-        NSLog(@"%@", tempObject);
-        for (id tempObject1 in _students) {
-            if([[tempObject1 objectForKey:@"Weekday" ] isEqualToString:tempObject]){
-                NSLog(@"%@", tempObject1);
-                [listOfStudentsForArray addObject:tempObject1];
+        //NSLog(@"%@", weekday);
+        for (id student in _students) {
+            if([[student objectForKey:@"Weekday" ] isEqualToString:weekday]){
+                //NSLog(@"%@", student);
+                [listOfStudentsForArray addObject:student];
             }
         }
         [viewStudentsArray addObject:listOfStudentsForArray];

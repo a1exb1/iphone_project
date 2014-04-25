@@ -34,6 +34,7 @@
     
     [[UITableViewHeaderFooterView appearance] setTintColor:[UIColor colorWithRed:0.9372549019607843 green:0.9372549019607843 blue:0.9372549019607843 alpha:1]];
     [_mainTableView setBackgroundColor:[UIColor colorWithRed:0.9372549019607843 green:0.9372549019607843 blue:0.9372549019607843 alpha:1]];
+    _mainTableView.hidden = YES;
 }
 
 
@@ -60,6 +61,8 @@
     cell.textLabel.text = [[_tutors objectAtIndex:indexPath.row] objectForKey:@"TutorName"];
     cell.accessibilityValue = [[_tutors objectAtIndex:indexPath.row] objectForKey:@"TutorID"];
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    
+    _mainTableView.hidden = NO;
     
     return cell;
 }

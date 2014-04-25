@@ -54,6 +54,14 @@ NSMutableArray *viewStudentsArray;
     viewStudentsArray = [[NSMutableArray alloc] init];
     [[UITableViewHeaderFooterView appearance] setTintColor:[UIColor colorWithRed:0.9372549019607843 green:0.9372549019607843 blue:0.9372549019607843 alpha:1]];
     [_mainTableView setBackgroundColor:[UIColor colorWithRed:0.9372549019607843 green:0.9372549019607843 blue:0.9372549019607843 alpha:1]];
+    _mainTableView.hidden = YES;
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
+{
+    UIView *view = [[UIView alloc] init];
+    [view setBackgroundColor:[UIColor clearColor]];
+    return view;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
@@ -83,12 +91,7 @@ NSMutableArray *viewStudentsArray;
     return [[viewStudentsArray objectAtIndex:section] count];
 }
 
-- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
-{
-    UIView *view = [[UIView alloc] init];
-    [view setBackgroundColor:[UIColor clearColor]];
-    return view;
-}
+
 
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -108,6 +111,8 @@ NSMutableArray *viewStudentsArray;
     cell.textLabel.text = [NSString stringWithFormat:@"%02d:%02d - %@", hour, minute, [[sectionArray objectAtIndex:indexPath.row] objectForKey:@"StudentName"]];
     cell.accessibilityValue = [[sectionArray objectAtIndex:indexPath.row] objectForKey:@"StudentID"];
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    
+    _mainTableView.hidden = NO;
     
     return cell;
 }

@@ -4,6 +4,63 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
+        <!--View Controller - Add Tutor-->
+        <scene sceneID="ard-km-y7n">
+            <objects>
+                <viewController id="Ls4-EQ-ovu" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RWp-Gq-oCH"/>
+                        <viewControllerLayoutGuide type="bottom" id="7ke-cZ-Pj7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Gb9-KS-q1u">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add Tutor" id="lGl-2U-FOP"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="drG-zx-DZH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="518" y="-1512"/>
+        </scene>
+        <!--View Controller - Add Course-->
+        <scene sceneID="iEj-kD-uTF">
+            <objects>
+                <viewController id="Fop-hj-njy" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="LsJ-8r-7co"/>
+                        <viewControllerLayoutGuide type="bottom" id="Wq3-g3-76w"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5p0-Qr-XNN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add Course" id="3Zg-0T-cMa"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bn4-Kh-F4V" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="938" y="-1520"/>
+        </scene>
+        <!--View Controller - Add Student to Course-->
+        <scene sceneID="VTv-fv-LCQ">
+            <objects>
+                <viewController id="RyH-r5-cao" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4IE-ZT-DxJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="W9s-hF-s3K"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="T3E-nb-Bpd">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add Student to Course" id="mqd-dU-ELZ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UBb-Oc-3Vn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1334" y="-1524"/>
+        </scene>
         <!--Tutors2 View Controller - Tutors-->
         <scene sceneID="2Ya-kq-dMJ">
             <objects>
@@ -20,6 +77,13 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <label key="tableFooterView" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="WYP-k6-B1J">
+                                    <rect key="frame" x="0.0" y="130" width="320" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="GiM-I9-4uN">
                                         <rect key="frame" x="0.0" y="86" width="320" height="44"/>
@@ -42,6 +106,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="mainTableView" destination="1ek-IP-U4O" id="ccw-iD-VYy"/>
+                        <outlet property="statusLbl" destination="WYP-k6-B1J" id="xaT-NP-mim"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IHw-Si-Y7h" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -64,6 +129,12 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <label key="tableFooterView" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="yEP-ro-Scv">
+                                    <rect key="frame" x="0.0" y="130" width="320" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="TTv-pc-C0l">
                                         <rect key="frame" x="0.0" y="86" width="320" height="44"/>
@@ -86,6 +157,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="mainTableView" destination="s5n-zg-Xda" id="Y8L-Kh-WbK"/>
+                        <outlet property="statusLbl" destination="yEP-ro-Scv" id="UeK-OE-G52"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JZt-A2-ydJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -108,6 +180,12 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <label key="tableFooterView" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ahd-kH-TYS">
+                                    <rect key="frame" x="0.0" y="130" width="320" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="c9P-PF-mQh">
                                         <rect key="frame" x="0.0" y="86" width="320" height="44"/>
@@ -130,6 +208,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="mainTableView" destination="f6n-zj-ygf" id="48R-sa-6VB"/>
+                        <outlet property="statusLbl" destination="ahd-kH-TYS" id="ZIC-bE-ALi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dr8-Nv-69M" userLabel="First Responder" sceneMemberID="firstResponder"/>

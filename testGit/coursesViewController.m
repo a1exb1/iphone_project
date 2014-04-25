@@ -11,6 +11,7 @@
 
 @interface coursesViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *mainTableView;
+@property (weak, nonatomic) IBOutlet UILabel *statusLbl;
 
 @end
 
@@ -40,7 +41,7 @@
     
     [[UITableViewHeaderFooterView appearance] setTintColor:[UIColor colorWithRed:0.9372549019607843 green:0.9372549019607843 blue:0.9372549019607843 alpha:1]];
     [_mainTableView setBackgroundColor:[UIColor colorWithRed:0.9372549019607843 green:0.9372549019607843 blue:0.9372549019607843 alpha:1]];
-    _mainTableView.hidden = YES;
+    //_mainTableView.hidden = YES;
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
@@ -67,7 +68,7 @@
     cell.accessibilityValue = [[_courses objectAtIndex:indexPath.row] objectForKey:@"CourseID"];
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
-    _mainTableView.hidden = NO;
+    //_mainTableView.hidden = NO;
     
     return cell;
 }
@@ -79,6 +80,10 @@
     //self.itemNameSender = cell.textLabel.text;
     [self performSegueWithIdentifier:@"CoursesToStudents" sender:self];
     
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
+    return 0;
 }
 
 -(void)connection:(NSURLConnection *) connection didReceiveResponse:(NSURLResponse *)response
@@ -98,6 +103,13 @@
     
     _courses = [NSJSONSerialization JSONObjectWithData:_data options:nil error:nil];
     [self.mainTableView reloadData];
+    
+    if ([_courses count] == 0) {
+        _statusLbl.text = @"No courses, click the plus to add one";
+    }
+    else{
+        _statusLbl.hidden = YES;
+    }
 }
 
 -(void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
@@ -105,6 +117,7 @@
     UIAlertView *errorView = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Data download failed" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
     [errorView show];
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+    
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender

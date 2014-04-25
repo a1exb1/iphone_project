@@ -11,6 +11,7 @@
 
 @interface studentsViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *mainTableView;
+@property (weak, nonatomic) IBOutlet UILabel *statusLbl;
 
 @end
 
@@ -54,7 +55,7 @@ NSMutableArray *viewStudentsArray;
     viewStudentsArray = [[NSMutableArray alloc] init];
     [[UITableViewHeaderFooterView appearance] setTintColor:[UIColor colorWithRed:0.9372549019607843 green:0.9372549019607843 blue:0.9372549019607843 alpha:1]];
     [_mainTableView setBackgroundColor:[UIColor colorWithRed:0.9372549019607843 green:0.9372549019607843 blue:0.9372549019607843 alpha:1]];
-    _mainTableView.hidden = YES;
+    //_mainTableView.hidden = YES;
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
@@ -112,7 +113,7 @@ NSMutableArray *viewStudentsArray;
     cell.accessibilityValue = [[sectionArray objectAtIndex:indexPath.row] objectForKey:@"StudentID"];
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
-    _mainTableView.hidden = NO;
+    //_mainTableView.hidden = NO;
     
     return cell;
 }
@@ -157,6 +158,13 @@ NSMutableArray *viewStudentsArray;
         [viewStudentsArray addObject:listOfStudentsForArray];
     }
     [self.mainTableView reloadData];
+    
+    if ([_students count] == 0) {
+        _statusLbl.text = @"No students, click the plus to add one";
+    }
+    else{
+        _statusLbl.hidden = YES;
+    }
     
 }
 

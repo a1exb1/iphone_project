@@ -12,6 +12,7 @@
 @interface tutors2ViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *mainTableView;
 
+@property (weak, nonatomic) IBOutlet UILabel *statusLbl;
 
 @end
 
@@ -34,7 +35,7 @@
     
     [[UITableViewHeaderFooterView appearance] setTintColor:[UIColor colorWithRed:0.9372549019607843 green:0.9372549019607843 blue:0.9372549019607843 alpha:1]];
     [_mainTableView setBackgroundColor:[UIColor colorWithRed:0.9372549019607843 green:0.9372549019607843 blue:0.9372549019607843 alpha:1]];
-    _mainTableView.hidden = YES;
+    //_mainTableView.hidden = YES;
 }
 
 
@@ -53,6 +54,10 @@
     return [_tutors count];
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
+    return 0;
+}
+
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault
@@ -62,7 +67,7 @@
     cell.accessibilityValue = [[_tutors objectAtIndex:indexPath.row] objectForKey:@"TutorID"];
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
-    _mainTableView.hidden = NO;
+    //_mainTableView.hidden = NO;
     
     return cell;
 }
@@ -93,6 +98,13 @@
 
     _tutors = [NSJSONSerialization JSONObjectWithData:_data options:nil error:nil];
     [self.mainTableView reloadData];
+    
+    if ([_tutors count] == 0) {
+        _statusLbl.text = @"No tutors, click the plus to add one";
+    }
+    else{
+        _statusLbl.hidden = YES;
+    }
 }
 
 -(void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error

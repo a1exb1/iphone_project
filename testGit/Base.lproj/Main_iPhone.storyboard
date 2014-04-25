@@ -159,7 +159,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Edit Student" id="fbg-W7-F7q">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="xtM-4N-cZ8"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="xtM-4N-cZ8">
+                            <connections>
+                                <action selector="saveStudent:" destination="H1Y-B8-iAt" id="mkl-0e-fpW"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="youSelectedLbl" destination="D2n-lK-WLr" id="q1V-9L-snF"/>

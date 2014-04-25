@@ -15,5 +15,6 @@
 @property NSArray *students;
 @property NSMutableData *data;
 @property NSString  *studentIDSender;
+@property NSArray *uniqueWeekdays;
 
 @end

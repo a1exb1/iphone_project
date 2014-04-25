@@ -48,4 +48,9 @@
 }
 */
 
+-(IBAction)saveStudent:(id)sender
+{
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
 @end

@@ -15,8 +15,6 @@
 
 @end
 
-NSArray *category1Array;
-NSArray *category2Array;
 
 @implementation tutors2ViewController
 

@@ -51,12 +51,48 @@
 
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewCell *cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault
+    UITableViewCell *cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle
                                                   reuseIdentifier:@"cell"];
     
     cell.textLabel.text = [[_students objectAtIndex:indexPath.row] objectForKey:@"StudentName"];
     cell.accessibilityValue = [[_students objectAtIndex:indexPath.row] objectForKey:@"StudentID"];
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    
+    
+    
+    NSString *weekdayFromJson = [NSString stringWithFormat:@"%@", [[_students objectAtIndex:indexPath.row] objectForKey:@"Weekday"]];
+    NSString *weekday = [NSString stringWithFormat:@""];
+    
+    
+    
+    if ([weekdayFromJson isEqualToString:@"0"]) {
+        weekday = [NSString stringWithFormat:@"Sunday"];
+    }
+    else if ([weekdayFromJson isEqualToString:@"1"]) {
+        weekday = [NSString stringWithFormat:@"Monday"];
+    }
+    else if ([weekdayFromJson isEqualToString:@"2"]) {
+        weekday = [NSString stringWithFormat:@"Tuesday"];
+    }
+    else if ([weekdayFromJson isEqualToString:@"3"]) {
+        weekday = [NSString stringWithFormat:@"Wednesday"];
+    }
+    else if ([weekdayFromJson isEqualToString:@"4"]) {
+        weekday = [NSString stringWithFormat:@"Thursday"];
+    }
+    else if ([weekdayFromJson isEqualToString:@"5"]) {
+        weekday = [NSString stringWithFormat:@"Friday"];
+    }
+    else if ([weekdayFromJson isEqualToString:@"6"]) {
+        weekday = [NSString stringWithFormat:@"Saturday"];
+    }
+    
+    //[NSString stringWithFormat:@"%02d", 1];
+    
+    int hour = [[[_students objectAtIndex:indexPath.row] objectForKey:@"Hour"] intValue];
+    int minute = [[[_students objectAtIndex:indexPath.row] objectForKey:@"Minute"] intValue];
+    
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ (%02d:%02d)", weekday, hour, minute];
     
     return cell;
 }

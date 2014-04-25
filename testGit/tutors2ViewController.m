@@ -7,6 +7,7 @@
 //
 
 #import "tutors2ViewController.h"
+#import "coursesViewController.h"
 
 @interface tutors2ViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *mainTableView;
@@ -44,15 +45,24 @@ NSArray *category2Array;
 
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewCell *categoryCell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault
-                                                          reuseIdentifier:@"categoryCell"];
+    UITableViewCell *cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault
+                                                          reuseIdentifier:@"cell"];
     
-    categoryCell.textLabel.text = [[_tutors objectAtIndex:indexPath.row] objectForKey:@"TutorName"];
-    categoryCell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    cell.textLabel.text = [[_tutors objectAtIndex:indexPath.row] objectForKey:@"TutorName"];
+    cell.accessibilityValue = [[_tutors objectAtIndex:indexPath.row] objectForKey:@"TutorID"];
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
-    return categoryCell;
+    return cell;
 }
 
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    //onclick for each object, put to label for example
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    self.tutorIDSender = cell.accessibilityValue;
+    //self.itemNameSender = cell.textLabel.text;
+    [self performSegueWithIdentifier:@"TutorsToCourses" sender:self];
+    
+}
 
 -(void)connection:(NSURLConnection *) connection didReceiveResponse:(NSURLResponse *)response
 {
@@ -133,6 +143,9 @@ NSArray *category2Array;
 {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    
+    coursesViewController *item = segue.destinationViewController;
+    item.tutorID = self.tutorIDSender;
     
 }
 

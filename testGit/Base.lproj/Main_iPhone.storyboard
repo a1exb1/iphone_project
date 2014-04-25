@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="6gc-r8-CT0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13A598" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="6gc-r8-CT0">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
         <!--Tutors2 View Controller - Tutors-->
@@ -20,6 +20,19 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="GiM-I9-4uN">
+                                        <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GiM-I9-4uN">
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="9kX-wJ-F2M" kind="push" identifier="TutorsToCourses" id="prS-Lb-w3d"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -35,45 +48,52 @@
             </objects>
             <point key="canvasLocation" x="517" y="-760"/>
         </scene>
-        <!--Table View Controller - Courses-->
-        <scene sceneID="phI-gb-I7M">
+        <!--Courses View Controller - Courses-->
+        <scene sceneID="1XH-vT-xP6">
             <objects>
-                <tableViewController id="IaP-ym-YJ7" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="cBn-3S-7gV">
+                <viewController id="9kX-wJ-F2M" customClass="coursesViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MLM-L3-4Kt"/>
+                        <viewControllerLayoutGuide type="bottom" id="BhS-ym-zPQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0B3-TE-k0t">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="ufg-HK-Hz5">
-                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ufg-HK-Hz5" id="nca-0w-BSZ">
-                                    <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="EO7-ZM-hG2" kind="push" identifier="CourseToStudent" id="I3b-ky-aFF"/>
-                                </connections>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="IaP-ym-YJ7" id="xcw-m8-k1a"/>
-                            <outlet property="delegate" destination="IaP-ym-YJ7" id="oEn-mc-rzm"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Courses" id="bAG-vz-9CE">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="4B2-fq-cJa"/>
-                    </navigationItem>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Nae-nJ-RcJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="s5n-zg-Xda">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="TTv-pc-C0l">
+                                        <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TTv-pc-C0l">
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="EO7-ZM-hG2" kind="push" identifier="CoursesToStudents" id="i2U-sA-ZkI"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Courses" id="82R-vT-rf1"/>
+                    <connections>
+                        <outlet property="mainTableView" destination="s5n-zg-Xda" id="Y8L-Kh-WbK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JZt-A2-ydJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="949" y="-768"/>
+            <point key="canvasLocation" x="941" y="-768"/>
         </scene>
-        <!--View Controller - Students-->
+        <!--Students View Controller - Students-->
         <scene sceneID="Qhi-qW-5Uc">
             <objects>
-                <viewController id="EO7-ZM-hG2" sceneMemberID="viewController">
+                <viewController id="EO7-ZM-hG2" customClass="studentsViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cru-pP-rvt"/>
                         <viewControllerLayoutGuide type="bottom" id="ZXx-Us-AxN"/>
@@ -106,6 +126,9 @@
                     <navigationItem key="navigationItem" title="Students" id="abH-H7-deW">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="pwT-q3-qaI"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="mainTableView" destination="f6n-zj-ygf" id="48R-sa-6VB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dr8-Nv-69M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -286,7 +309,9 @@
                         </subviews>
                         <color key="backgroundColor" white="0.89894153229999996" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Lesson" id="iHu-kZ-4DT"/>
+                    <navigationItem key="navigationItem" title="Lesson" id="iHu-kZ-4DT">
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="UNm-Pa-xXx"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="box1View" destination="M4n-3n-rci" id="HVr-yu-tfL"/>
                     </connections>

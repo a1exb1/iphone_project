@@ -12,5 +12,6 @@
 
 @property NSArray *tutors;
 @property NSMutableData *data;
+@property NSString  *tutorIDSender;
 
 @end

@@ -161,6 +161,7 @@ NSMutableArray *viewStudentsArray;
     
     if ([_students count] == 0) {
         _statusLbl.text = @"No students, click the plus to add one";
+        [_mainTableView setBackgroundColor:[UIColor whiteColor]];
     }
     else{
         _statusLbl.hidden = YES;

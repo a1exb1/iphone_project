@@ -106,9 +106,11 @@
     
     if ([_courses count] == 0) {
         _statusLbl.text = @"No courses, click the plus to add one";
+        [_mainTableView setBackgroundColor:[UIColor whiteColor]];
     }
     else{
         _statusLbl.hidden = YES;
+        
     }
 }
 

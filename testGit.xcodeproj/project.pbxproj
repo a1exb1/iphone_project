@@ -25,6 +25,7 @@
 		E430DCB5190A582B00DEFD7C /* coursesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E430DCB4190A582B00DEFD7C /* coursesViewController.m */; };
 		E430DCB8190A5BB200DEFD7C /* studentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E430DCB7190A5BB200DEFD7C /* studentsViewController.m */; };
 		E47352801900279E008006EE /* indexViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E473527F1900279E008006EE /* indexViewController.m */; };
+		E4B1DF7E190BCB3C0069DB6A /* StudentCourseLink.m in Sources */ = {isa = PBXBuildFile; fileRef = E4B1DF7D190BCB3C0069DB6A /* StudentCourseLink.m */; };
 		E4F96CC919097441008D75D6 /* tutorsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4F96CC819097441008D75D6 /* tutorsTableViewController.m */; };
 		E4F96CCC19097D49008D75D6 /* tutors2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4F96CCB19097D49008D75D6 /* tutors2ViewController.m */; };
 		E4F96D13190AA12B008D75D6 /* editStudentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4F96D12190AA12B008D75D6 /* editStudentViewController.m */; };
@@ -67,6 +68,8 @@
 		E430DCB7190A5BB200DEFD7C /* studentsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = studentsViewController.m; sourceTree = "<group>"; };
 		E473527E1900279E008006EE /* indexViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = indexViewController.h; sourceTree = "<group>"; };
 		E473527F1900279E008006EE /* indexViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = indexViewController.m; sourceTree = "<group>"; };
+		E4B1DF7C190BCB3C0069DB6A /* StudentCourseLink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudentCourseLink.h; sourceTree = "<group>"; };
+		E4B1DF7D190BCB3C0069DB6A /* StudentCourseLink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudentCourseLink.m; sourceTree = "<group>"; };
 		E4F96CC719097441008D75D6 /* tutorsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tutorsTableViewController.h; sourceTree = "<group>"; };
 		E4F96CC819097441008D75D6 /* tutorsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = tutorsTableViewController.m; sourceTree = "<group>"; };
 		E4F96CCA19097D49008D75D6 /* tutors2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tutors2ViewController.h; sourceTree = "<group>"; };
@@ -102,6 +105,8 @@
 		79AA222E1909439D005AC8A3 /* classes */ = {
 			isa = PBXGroup;
 			children = (
+				E4B1DF7C190BCB3C0069DB6A /* StudentCourseLink.h */,
+				E4B1DF7D190BCB3C0069DB6A /* StudentCourseLink.m */,
 			);
 			name = classes;
 			sourceTree = "<group>";
@@ -356,6 +361,7 @@
 				E430DCB8190A5BB200DEFD7C /* studentsViewController.m in Sources */,
 				E40DF28E190017E100E1332A /* ABAppDelegate.m in Sources */,
 				E47352801900279E008006EE /* indexViewController.m in Sources */,
+				E4B1DF7E190BCB3C0069DB6A /* StudentCourseLink.m in Sources */,
 				E430DCB5190A582B00DEFD7C /* coursesViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

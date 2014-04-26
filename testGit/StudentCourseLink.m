@@ -14,6 +14,7 @@
 -(void) load{
     
 }
+
 -(void) loadByID: (long)linkID{
     
 }

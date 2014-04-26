@@ -22,6 +22,7 @@
 		E40DF2A2190017E200E1332A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E40DF281190017E100E1332A /* UIKit.framework */; };
 		E40DF2AA190017E200E1332A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E40DF2A8190017E200E1332A /* InfoPlist.strings */; };
 		E40DF2AC190017E200E1332A /* testGitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E40DF2AB190017E200E1332A /* testGitTests.m */; };
+		E42B6112190C0582001B977F /* studentNote.m in Sources */ = {isa = PBXBuildFile; fileRef = E42B6111190C0582001B977F /* studentNote.m */; };
 		E430DCB5190A582B00DEFD7C /* coursesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E430DCB4190A582B00DEFD7C /* coursesViewController.m */; };
 		E430DCB8190A5BB200DEFD7C /* studentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E430DCB7190A5BB200DEFD7C /* studentsViewController.m */; };
 		E47352801900279E008006EE /* indexViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E473527F1900279E008006EE /* indexViewController.m */; };
@@ -62,6 +63,8 @@
 		E40DF2A7190017E200E1332A /* testGitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "testGitTests-Info.plist"; sourceTree = "<group>"; };
 		E40DF2A9190017E200E1332A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E40DF2AB190017E200E1332A /* testGitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = testGitTests.m; sourceTree = "<group>"; };
+		E42B6110190C0582001B977F /* studentNote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = studentNote.h; sourceTree = "<group>"; };
+		E42B6111190C0582001B977F /* studentNote.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = studentNote.m; sourceTree = "<group>"; };
 		E430DCB3190A582B00DEFD7C /* coursesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = coursesViewController.h; sourceTree = "<group>"; };
 		E430DCB4190A582B00DEFD7C /* coursesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = coursesViewController.m; sourceTree = "<group>"; };
 		E430DCB6190A5BB200DEFD7C /* studentsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = studentsViewController.h; sourceTree = "<group>"; };
@@ -107,6 +110,8 @@
 			children = (
 				E4B1DF7C190BCB3C0069DB6A /* StudentCourseLink.h */,
 				E4B1DF7D190BCB3C0069DB6A /* StudentCourseLink.m */,
+				E42B6110190C0582001B977F /* studentNote.h */,
+				E42B6111190C0582001B977F /* studentNote.m */,
 			);
 			name = classes;
 			sourceTree = "<group>";
@@ -353,6 +358,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E42B6112190C0582001B977F /* studentNote.m in Sources */,
 				E4F96CCC19097D49008D75D6 /* tutors2ViewController.m in Sources */,
 				E40DF28A190017E100E1332A /* main.m in Sources */,
 				E4F96CC919097441008D75D6 /* tutorsTableViewController.m in Sources */,

@@ -21,6 +21,4 @@
 -(void) save;
 -(void) deleteLink;
 
-
-
 @end

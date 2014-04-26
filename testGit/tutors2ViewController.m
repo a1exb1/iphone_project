@@ -19,6 +19,10 @@
 
 @implementation tutors2ViewController
 
+- (void)viewDidAppear:(BOOL)animated {
+    
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -78,6 +82,7 @@
     self.tutorIDSender = cell.accessibilityValue;
     //self.itemNameSender = cell.textLabel.text;
     [self performSegueWithIdentifier:@"TutorsToCourses" sender:self];
+    [self.mainTableView deselectRowAtIndexPath:indexPath animated:YES];
     
 }
 
@@ -114,7 +119,6 @@
     [errorView show];
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
 }
-
 
 
 

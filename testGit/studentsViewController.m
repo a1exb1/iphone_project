@@ -123,7 +123,7 @@ NSMutableArray *viewStudentsArray;
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     self.studentIDSender = cell.accessibilityValue;
     [self performSegueWithIdentifier:@"StudentsToEditStudent" sender:self];
-    
+    [self.mainTableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 -(void)connection:(NSURLConnection *) connection didReceiveResponse:(NSURLResponse *)response

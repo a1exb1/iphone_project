@@ -79,7 +79,7 @@
     self.courseIDSender = cell.accessibilityValue;
     //self.itemNameSender = cell.textLabel.text;
     [self performSegueWithIdentifier:@"CoursesToStudents" sender:self];
-    
+    [self.mainTableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{

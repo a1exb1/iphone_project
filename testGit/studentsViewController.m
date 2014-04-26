@@ -28,6 +28,16 @@ NSMutableArray *viewStudentsArray;
     return self;
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    // Unselect the selected row if any
+    NSIndexPath*    selection = [self.mainTableView indexPathForSelectedRow];
+    if (selection) {
+        [self.mainTableView deselectRowAtIndexPath:selection animated:YES];
+    }
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -55,7 +65,6 @@ NSMutableArray *viewStudentsArray;
     viewStudentsArray = [[NSMutableArray alloc] init];
     [[UITableViewHeaderFooterView appearance] setTintColor:[UIColor groupTableViewBackgroundColor]];
     [_mainTableView setBackgroundColor:[UIColor groupTableViewBackgroundColor]];
-    //_mainTableView.hidden = YES;
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
@@ -92,9 +101,6 @@ NSMutableArray *viewStudentsArray;
     return [[viewStudentsArray objectAtIndex:section] count];
 }
 
-
-
-
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle
                                                   reuseIdentifier:@"cell"];
@@ -113,17 +119,14 @@ NSMutableArray *viewStudentsArray;
     cell.accessibilityValue = [[sectionArray objectAtIndex:indexPath.row] objectForKey:@"StudentID"];
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
-    //_mainTableView.hidden = NO;
-    
     return cell;
 }
-
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     self.studentIDSender = cell.accessibilityValue;
     [self performSegueWithIdentifier:@"StudentsToEditStudent" sender:self];
-    [self.mainTableView deselectRowAtIndexPath:indexPath animated:YES];
+    
 }
 
 -(void)connection:(NSURLConnection *) connection didReceiveResponse:(NSURLResponse *)response

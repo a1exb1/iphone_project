@@ -25,6 +25,17 @@
     }
     return self;
 }
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    // Unselect the selected row if any
+    NSIndexPath*    selection = [self.mainTableView indexPathForSelectedRow];
+    if (selection) {
+        [self.mainTableView deselectRowAtIndexPath:selection animated:YES];
+    }
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -41,7 +52,6 @@
     
     [[UITableViewHeaderFooterView appearance] setTintColor:[UIColor groupTableViewBackgroundColor]];
     [_mainTableView setBackgroundColor:[UIColor groupTableViewBackgroundColor]];
-    //_mainTableView.hidden = YES;
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
@@ -68,8 +78,6 @@
     cell.accessibilityValue = [[_courses objectAtIndex:indexPath.row] objectForKey:@"CourseID"];
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
-    //_mainTableView.hidden = NO;
-    
     return cell;
 }
 
@@ -79,7 +87,7 @@
     self.courseIDSender = cell.accessibilityValue;
     //self.itemNameSender = cell.textLabel.text;
     [self performSegueWithIdentifier:@"CoursesToStudents" sender:self];
-    [self.mainTableView deselectRowAtIndexPath:indexPath animated:YES];
+    
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
@@ -89,7 +97,6 @@
 -(void)connection:(NSURLConnection *) connection didReceiveResponse:(NSURLResponse *)response
 {
     _data = [[NSMutableData alloc]init];
-    
 }
 
 -(void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)theData
@@ -119,7 +126,6 @@
     UIAlertView *errorView = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Data download failed" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
     [errorView show];
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
-    
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender

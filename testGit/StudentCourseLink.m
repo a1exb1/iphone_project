@@ -10,4 +10,21 @@
 
 @implementation StudentCourseLink
 
+
+-(void) load{
+    
+}
+-(void) loadByID: (long)linkID{
+    
+}
+
+-(void) save{
+    
+}
+
+-(void) deleteLink{
+    
+}
+
+
 @end

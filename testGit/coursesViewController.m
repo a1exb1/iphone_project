@@ -94,6 +94,18 @@
     return 0;
 }
 
+//- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+//    return 40;
+//}
+
+//- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+//{
+//    NSString *sectionName = [NSString stringWithFormat:@"%@", _tutorName];
+//
+//    
+//    return sectionName;
+//}
+
 -(void)connection:(NSURLConnection *) connection didReceiveResponse:(NSURLResponse *)response
 {
     _data = [[NSMutableData alloc]init];

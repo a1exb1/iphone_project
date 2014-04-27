@@ -63,6 +63,10 @@
     return 1;
 }
 
+//- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+//    return 40;
+//}
+
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return [_tutors count];
 }
@@ -87,7 +91,7 @@
     //onclick for each object, put to label for example
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     self.tutorIDSender = cell.accessibilityValue;
-    //self.itemNameSender = cell.textLabel.text;
+    self.tutorNameSender = cell.textLabel.text;
     [self performSegueWithIdentifier:@"TutorsToCourses" sender:self];
 }
 
@@ -122,6 +126,17 @@
     UIAlertView *errorView = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Data download failed" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
     [errorView show];
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+}
+
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+    
+    coursesViewController *item = segue.destinationViewController;
+    item.tutorID = self.tutorIDSender;
+    item.tutorName = self.tutorNameSender;
 }
 
 /*
@@ -166,14 +181,7 @@
 //#pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-    
-    coursesViewController *item = segue.destinationViewController;
-    item.tutorID = self.tutorIDSender;
-}
+
 
 
 @end

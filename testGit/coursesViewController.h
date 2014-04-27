@@ -11,6 +11,7 @@
 @interface coursesViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
 @property NSString *tutorID;
+@property NSString *tutorName;
 
 @property NSArray *courses;
 @property NSMutableData *data;

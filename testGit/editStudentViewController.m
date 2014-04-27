@@ -7,6 +7,7 @@
 //
 
 #import "editStudentViewController.h"
+#import "tutor.h"
 
 @interface editStudentViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *youSelectedLbl;
@@ -29,6 +30,13 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.youSelectedLbl.text = [NSString stringWithFormat:@"You selected student: %@", _studentID];
+    
+    
+    // tutor object (inheriting user)
+    tutor *tutorObject = [[tutor alloc] init];
+    [tutorObject setUserID: 3];
+    [tutorObject setTutorProperty:@"hello"];
+    NSLog(@"userid: %li, tutorproperty %@", [tutorObject userID], [tutorObject tutorProperty]);
 }
 
 - (void)didReceiveMemoryWarning

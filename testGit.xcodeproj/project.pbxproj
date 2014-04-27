@@ -25,6 +25,8 @@
 		E42B6112190C0582001B977F /* studentNote.m in Sources */ = {isa = PBXBuildFile; fileRef = E42B6111190C0582001B977F /* studentNote.m */; };
 		E430DCB5190A582B00DEFD7C /* coursesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E430DCB4190A582B00DEFD7C /* coursesViewController.m */; };
 		E430DCB8190A5BB200DEFD7C /* studentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E430DCB7190A5BB200DEFD7C /* studentsViewController.m */; };
+		E4494DD4190D84B700585CB8 /* user.m in Sources */ = {isa = PBXBuildFile; fileRef = E4494DD3190D84B700585CB8 /* user.m */; };
+		E4494DD7190D851E00585CB8 /* tutor.m in Sources */ = {isa = PBXBuildFile; fileRef = E4494DD6190D851E00585CB8 /* tutor.m */; };
 		E47352801900279E008006EE /* indexViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E473527F1900279E008006EE /* indexViewController.m */; };
 		E4B1DF7E190BCB3C0069DB6A /* StudentCourseLink.m in Sources */ = {isa = PBXBuildFile; fileRef = E4B1DF7D190BCB3C0069DB6A /* StudentCourseLink.m */; };
 		E4F96CC919097441008D75D6 /* tutorsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4F96CC819097441008D75D6 /* tutorsTableViewController.m */; };
@@ -69,6 +71,10 @@
 		E430DCB4190A582B00DEFD7C /* coursesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = coursesViewController.m; sourceTree = "<group>"; };
 		E430DCB6190A5BB200DEFD7C /* studentsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = studentsViewController.h; sourceTree = "<group>"; };
 		E430DCB7190A5BB200DEFD7C /* studentsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = studentsViewController.m; sourceTree = "<group>"; };
+		E4494DD2190D84B700585CB8 /* user.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = user.h; sourceTree = "<group>"; };
+		E4494DD3190D84B700585CB8 /* user.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = user.m; sourceTree = "<group>"; };
+		E4494DD5190D851E00585CB8 /* tutor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tutor.h; sourceTree = "<group>"; };
+		E4494DD6190D851E00585CB8 /* tutor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = tutor.m; sourceTree = "<group>"; };
 		E473527E1900279E008006EE /* indexViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = indexViewController.h; sourceTree = "<group>"; };
 		E473527F1900279E008006EE /* indexViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = indexViewController.m; sourceTree = "<group>"; };
 		E4B1DF7C190BCB3C0069DB6A /* StudentCourseLink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudentCourseLink.h; sourceTree = "<group>"; };
@@ -112,6 +118,10 @@
 				E4B1DF7D190BCB3C0069DB6A /* StudentCourseLink.m */,
 				E42B6110190C0582001B977F /* studentNote.h */,
 				E42B6111190C0582001B977F /* studentNote.m */,
+				E4494DD2190D84B700585CB8 /* user.h */,
+				E4494DD3190D84B700585CB8 /* user.m */,
+				E4494DD5190D851E00585CB8 /* tutor.h */,
+				E4494DD6190D851E00585CB8 /* tutor.m */,
 			);
 			name = classes;
 			sourceTree = "<group>";
@@ -362,6 +372,7 @@
 				E4F96CCC19097D49008D75D6 /* tutors2ViewController.m in Sources */,
 				E40DF28A190017E100E1332A /* main.m in Sources */,
 				E4F96CC919097441008D75D6 /* tutorsTableViewController.m in Sources */,
+				E4494DD4190D84B700585CB8 /* user.m in Sources */,
 				E40DF297190017E100E1332A /* ABViewController.m in Sources */,
 				E4F96D13190AA12B008D75D6 /* editStudentViewController.m in Sources */,
 				E430DCB8190A5BB200DEFD7C /* studentsViewController.m in Sources */,
@@ -369,6 +380,7 @@
 				E47352801900279E008006EE /* indexViewController.m in Sources */,
 				E4B1DF7E190BCB3C0069DB6A /* StudentCourseLink.m in Sources */,
 				E430DCB5190A582B00DEFD7C /* coursesViewController.m in Sources */,
+				E4494DD7190D851E00585CB8 /* tutor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

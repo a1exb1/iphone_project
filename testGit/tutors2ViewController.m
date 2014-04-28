@@ -9,6 +9,8 @@
 #import "tutors2ViewController.h"
 #import "coursesViewController.h"
 
+
+
 @interface tutors2ViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *mainTableView;
 
@@ -19,18 +21,41 @@
 
 @implementation tutors2ViewController
 
-- (void)viewDidAppear:(BOOL)animated {
-    
+- (void)menuViewControllerDidFinishWithMenuItemID:(NSInteger)menuItemID
+{
+     [self.slidingViewController resetTopView];
 }
+
+
+
+- (void)viewDidAppear:(BOOL)animated {
+   }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+   
+    // Add a shadow to the top view so it looks like it is on top of the others
+    self.view.layer.shadowOpacity = 0.75f;
+    self.view.layer.shadowRadius = 10.0f;
+    self.view.layer.shadowColor = [[UIColor blackColor] CGColor];
+    
+    // Tell it which view should be created under left
+    if (![self.slidingViewController.underLeftViewController isKindOfClass:[MenuViewController class]]) {
+        self.slidingViewController.underLeftViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"MenuView"];
+        //[(MenuViewController *)self.slidingViewController.underLeftViewController setCategoryList:self.toDoCategories];
+        [(MenuViewController *)self.slidingViewController.underLeftViewController setDelegate:self];
+    }
+    
+    // Add the pan gesture to allow sliding
+    [self.view addGestureRecognizer:self.slidingViewController.panGesture];
+    
     // Unselect the selected row if any
     NSIndexPath*    selection = [self.mainTableView indexPathForSelectedRow];
     if (selection) {
         [self.mainTableView deselectRowAtIndexPath:selection animated:YES];
     }
+
 }
 
 - (void)viewDidLoad
@@ -49,6 +74,8 @@
     
     [[UITableViewHeaderFooterView appearance] setTintColor:[UIColor groupTableViewBackgroundColor]];
     [_mainTableView setBackgroundColor:[UIColor groupTableViewBackgroundColor]];
+    
+    
 }
 
 

@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		795B6410190E45D900A2C879 /* ECSlidingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 795B640D190E45D900A2C879 /* ECSlidingViewController.m */; };
+		795B6411190E45D900A2C879 /* UIImage+ImageWithUIView.m in Sources */ = {isa = PBXBuildFile; fileRef = 795B640F190E45D900A2C879 /* UIImage+ImageWithUIView.m */; };
+		795B6413190E460A00A2C879 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 795B6412190E460A00A2C879 /* QuartzCore.framework */; };
+		795B6419190E4A7700A2C879 /* initialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 795B6418190E4A7700A2C879 /* initialViewController.m */; };
+		795B641C190E56A900A2C879 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 795B641B190E56A900A2C879 /* MenuViewController.m */; };
+		795B641F190E599700A2C879 /* ToDoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 795B641E190E599700A2C879 /* ToDoViewController.m */; };
 		E40DF27E190017E100E1332A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E40DF27D190017E100E1332A /* Foundation.framework */; };
 		E40DF280190017E100E1332A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E40DF27F190017E100E1332A /* CoreGraphics.framework */; };
 		E40DF282190017E100E1332A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E40DF281190017E100E1332A /* UIKit.framework */; };
@@ -45,6 +51,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		795B640C190E45D900A2C879 /* ECSlidingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECSlidingViewController.h; sourceTree = "<group>"; };
+		795B640D190E45D900A2C879 /* ECSlidingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECSlidingViewController.m; sourceTree = "<group>"; };
+		795B640E190E45D900A2C879 /* UIImage+ImageWithUIView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageWithUIView.h"; sourceTree = "<group>"; };
+		795B640F190E45D900A2C879 /* UIImage+ImageWithUIView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageWithUIView.m"; sourceTree = "<group>"; };
+		795B6412190E460A00A2C879 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		795B6417190E4A7700A2C879 /* initialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = initialViewController.h; sourceTree = "<group>"; };
+		795B6418190E4A7700A2C879 /* initialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = initialViewController.m; sourceTree = "<group>"; };
+		795B641A190E56A900A2C879 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
+		795B641B190E56A900A2C879 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
+		795B641D190E599700A2C879 /* ToDoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToDoViewController.h; sourceTree = "<group>"; };
+		795B641E190E599700A2C879 /* ToDoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToDoViewController.m; sourceTree = "<group>"; };
 		E40DF27A190017E100E1332A /* testGit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testGit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E40DF27D190017E100E1332A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E40DF27F190017E100E1332A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -92,6 +109,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				795B6413190E460A00A2C879 /* QuartzCore.framework in Frameworks */,
 				E40DF280190017E100E1332A /* CoreGraphics.framework in Frameworks */,
 				E40DF282190017E100E1332A /* UIKit.framework in Frameworks */,
 				E40DF27E190017E100E1332A /* Foundation.framework in Frameworks */,
@@ -111,6 +129,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		795B640A190E45D900A2C879 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				795B640B190E45D900A2C879 /* ECSlidingViewController */,
+			);
+			path = Vendor;
+			sourceTree = "<group>";
+		};
+		795B640B190E45D900A2C879 /* ECSlidingViewController */ = {
+			isa = PBXGroup;
+			children = (
+				795B640C190E45D900A2C879 /* ECSlidingViewController.h */,
+				795B640D190E45D900A2C879 /* ECSlidingViewController.m */,
+				795B640E190E45D900A2C879 /* UIImage+ImageWithUIView.h */,
+				795B640F190E45D900A2C879 /* UIImage+ImageWithUIView.m */,
+			);
+			path = ECSlidingViewController;
+			sourceTree = "<group>";
+		};
 		79AA222E1909439D005AC8A3 /* classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -167,6 +204,12 @@
 		79AA2234190943DE005AC8A3 /* menu */ = {
 			isa = PBXGroup;
 			children = (
+				795B6417190E4A7700A2C879 /* initialViewController.h */,
+				795B6418190E4A7700A2C879 /* initialViewController.m */,
+				795B641A190E56A900A2C879 /* MenuViewController.h */,
+				795B641B190E56A900A2C879 /* MenuViewController.m */,
+				795B641D190E599700A2C879 /* ToDoViewController.h */,
+				795B641E190E599700A2C879 /* ToDoViewController.m */,
 			);
 			name = menu;
 			sourceTree = "<group>";
@@ -200,6 +243,7 @@
 		E40DF27C190017E100E1332A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				795B6412190E460A00A2C879 /* QuartzCore.framework */,
 				E40DF27D190017E100E1332A /* Foundation.framework */,
 				E40DF27F190017E100E1332A /* CoreGraphics.framework */,
 				E40DF281190017E100E1332A /* UIKit.framework */,
@@ -211,6 +255,7 @@
 		E40DF283190017E100E1332A /* testGit */ = {
 			isa = PBXGroup;
 			children = (
+				795B640A190E45D900A2C879 /* Vendor */,
 				79AA222E1909439D005AC8A3 /* classes */,
 				E473527D19002785008006EE /* viewControllers */,
 				E40DF28C190017E100E1332A /* ABAppDelegate.h */,
@@ -369,15 +414,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				E42B6112190C0582001B977F /* studentNote.m in Sources */,
+				795B641C190E56A900A2C879 /* MenuViewController.m in Sources */,
 				E4F96CCC19097D49008D75D6 /* tutors2ViewController.m in Sources */,
 				E40DF28A190017E100E1332A /* main.m in Sources */,
+				795B6419190E4A7700A2C879 /* initialViewController.m in Sources */,
 				E4F96CC919097441008D75D6 /* tutorsTableViewController.m in Sources */,
 				E4494DD4190D84B700585CB8 /* user.m in Sources */,
 				E40DF297190017E100E1332A /* ABViewController.m in Sources */,
+				795B641F190E599700A2C879 /* ToDoViewController.m in Sources */,
 				E4F96D13190AA12B008D75D6 /* editStudentViewController.m in Sources */,
+				795B6411190E45D900A2C879 /* UIImage+ImageWithUIView.m in Sources */,
 				E430DCB8190A5BB200DEFD7C /* studentsViewController.m in Sources */,
 				E40DF28E190017E100E1332A /* ABAppDelegate.m in Sources */,
 				E47352801900279E008006EE /* indexViewController.m in Sources */,
+				795B6410190E45D900A2C879 /* ECSlidingViewController.m in Sources */,
 				E4B1DF7E190BCB3C0069DB6A /* StudentCourseLink.m in Sources */,
 				E430DCB5190A582B00DEFD7C /* coursesViewController.m in Sources */,
 				E4494DD7190D851E00585CB8 /* tutor.m in Sources */,

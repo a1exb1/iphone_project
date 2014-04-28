@@ -7,8 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <QuartzCore/QuartzCore.h>
+#import "ECSlidingViewController.h"
+#import "MenuViewController.h"
 
-@interface tutors2ViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+@interface tutors2ViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, MenuViewControllerDelegate>
 
 @property NSArray *tutors;
 @property NSMutableData *data;
